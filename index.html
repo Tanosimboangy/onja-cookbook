@@ -15,15 +15,15 @@
 					<input type="text" class="name" name="name" id="recipe-name" required >
 				</div>
 				<div class="container">
-					<label for="">Picture of the result (URL)</label><br>
-					<input type="text" required >
+					<label for="recipe-photo">Picture of the result (URL)</label><br>
+					<input type="text" class="recipe-image" id="recipe-photo" required >
 				</div>
 				<div class="container">
-					<label for="">Who's the cook?</label><br>
-					<input type="text" required >
+					<label for="cook-name">Who's the cook?</label><br>
+					<input type="text" class="cook_name" id="cook-name" required >
 				</div>
 				<div class="container">
-					<label for="">What's the difficulty?</label><br>
+					<label>What's the difficulty?</label><br>
 					<select name="level" class="select-level" required>
 						<option value="begginer">begginer</option>
 						<option value="easy">easy</option>
@@ -32,27 +32,27 @@
 					</select>
 				</div>
 				<div class="container">
-					<label for="">How much time does it take?</label><br>
-					<select name="level" class="select-level" required>
+					<label>How much time does it take?</label><br>
+					<select name="duration" class="select-duration" required>
 						<option value="Less than 15 minutes">Less than 15minutes</option>
-						<option value="About 30 minutes">About 30 minutes</option>
+						<option value="15 minutes">15 minutes</option>
+						<option value="30 minutes">30 minutes</option>
 						<option value="45 minutes">45 minutes</option>
-						<option value="1 hour">1 hour</option>
+						<option value="60 minutes ot 1 hour">60 minutes ot 1 hour</option>
 						<option value="More than 1 hour">More than 1 hour</option>
-						<option value="2 hours">2 hours</option>
 					</select>
 				</div>
 				<div class="container">
 					<label for="input-ingredients">Ingredients</label><br>
 					<input type="text" id="input-ingredients" required >
 				</div>
-				<div class="container" id="step" >
+				<div class="container">
 					<label for="steps">Steps</label><br>
 					<input type="text" id="steps" required ><br>
-					<button>Add a new step to the list</button>
+					<button type="submit" class="add" id="add-button">Add a new step to the list</button>
 				</div>
 				<div class="container">
-					<button type="submit">Submit</button><br>
+					<button type="submit" class="submit" id="submit-button">Submit</button>
 				</div>
 			</div>
 		</form>
