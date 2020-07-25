@@ -1,3 +1,4 @@
+const Form = document.getElementsByTagName('form');
 const recipeName = document.querySelector('#recipe-name');
 const recipeImage = document.querySelector('#recipe-photo');
 const cookName = document.querySelector('#cook-name');
@@ -16,7 +17,7 @@ const submitButton = document.querySelector('#submit-button');
 const handleClick = event => {
     console.log(event);
     const myHTML = `
-    <input type="text" id="new-input-ingredients" placeholder="Ingredients for the recipe" required ><br>
+    <input type="text" class="new-input-ingredient" id="input-ingredients" placeholder="Ingredients for the recipe" required ><br>
     `;
     newInput.innerHTML += myHTML;
 } 
@@ -31,12 +32,51 @@ const handleButtonClick = event => {
     `;
     newStep.innerHTML += mySecHTML;
 }
-
 addingStepsButton.addEventListener('click', handleButtonClick);
+
 
 // ********** // *********** //
 // Manupilating the submit button
 const handleSubmitButton = (event) => {
-    console.log(event);
+    event.preventDefault();
+    console.log(recipes);
+    Form.reset();
 }
 submitButton.addEventListener('click', handleSubmitButton);
+
+const getFormvalue = () => {
+  const newIngredient = document.querySelector(".new-input-ingredient");
+  for (var i = 0; i < newIngredient.length; i++) {
+   if (newIngredient.elements[i].value!='Submit') {  
+      console.log(newIngredient.elements[i].value);
+     }
+   }
+}
+
+// const getFormvalue = () => {
+//   var x = document.querySelector(">sixth");
+//   for (var i = 0; i < x.length; i++)
+//   {
+//    if (x.elements[i].value!='Submit')
+//     {  
+//       console.log(x.elements[i].value);
+//      }  
+//    }
+// }
+
+var recipename =  recipeName.value;
+
+const recipes = [{
+    title: '${recipename}',
+    picture: 'https://recipeImage.value',
+    author: 'cookName.value',
+    difficulty: 'recipeLevel.value',
+    timing: 'recipeDuration.value',
+    ingredients: ['eggs', 'salt', 'water'],
+    steps: [
+        'Put a pan on the fire',
+        'Crack the eggs on it',
+        'Wait, put them out',
+        'Add some salt on it',
+    ],
+}];
