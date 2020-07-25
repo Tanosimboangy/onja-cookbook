@@ -10,19 +10,19 @@
 		<form>
 			<h1>Onja Cookbook</h1>
 			<div class="big-container">
-				<div class="container">
+				<div class="container first">
 					<label for="recipe-name">What's the recipe name?</label><br>
-					<input type="text" class="name" name="name" id="recipe-name" required >
+					<input type="text" class="name" name="name" id="recipe-name" placeholder="Name of the recipe" required >
 				</div>
-				<div class="container">
+				<div class="container second">
 					<label for="recipe-photo">Picture of the result (URL)</label><br>
-					<input type="text" class="recipe-image" id="recipe-photo" required >
+					<input type="text" class="recipe-image" id="recipe-photo" placeholder="Image of the recipe" required >
 				</div>
-				<div class="container">
+				<div class="container third">
 					<label for="cook-name">Who's the cook?</label><br>
-					<input type="text" class="cook_name" id="cook-name" required >
+					<input type="text" class="cook_name" id="cook-name" placeholder="Cook's name" required >
 				</div>
-				<div class="container">
+				<div class="container fourth">
 					<label>What's the difficulty?</label><br>
 					<select name="level" class="select-level" required>
 						<option value="begginer">begginer</option>
@@ -31,7 +31,7 @@
 						<option value="difficult">difficult</option>
 					</select>
 				</div>
-				<div class="container">
+				<div class="container fith">
 					<label>How much time does it take?</label><br>
 					<select name="duration" class="select-duration" required>
 						<option value="Less than 15 minutes">Less than 15minutes</option>
@@ -42,16 +42,20 @@
 						<option value="More than 1 hour">More than 1 hour</option>
 					</select>
 				</div>
-				<div class="container">
+				<div class="container sixth">
 					<label for="input-ingredients">Ingredients</label><br>
-					<input type="text" id="input-ingredients" required >
+					<div class="new-input">
+
+					</div>
+					<input type="text" id="input-ingredients" placeholder="Ingredients for the recipe" required ><br>
+					<button class="add-ingredient" id="new-ingredient">Add a new ingredient to the list</button>
 				</div>
-				<div class="container">
+				<div class="container seventh">
 					<label for="steps">Steps</label><br>
-					<input type="text" id="steps" required ><br>
-					<button type="submit" class="add" id="add-button">Add a new step to the list</button>
+					<input type="text" id="steps" placeholder="All of the steps to prepare this recipe" required ><br>
+					<button class="add" id="add-button">Add a new step to the list</button>
 				</div>
-				<div class="container">
+				<div class="container eighth">
 					<button type="submit" class="submit" id="submit-button">Submit</button>
 				</div>
 			</div>
