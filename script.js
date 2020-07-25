@@ -35,6 +35,26 @@ const handleButtonClick = event => {
 addingStepsButton.addEventListener('click', handleButtonClick);
 
 
+const getFormvalue = () => {
+    const newIngredient = document.querySelector(".new-input-ingredient");
+    for (var i = 0; i < newIngredient.length; i++) {
+     if (newIngredient.elements[i].value!='Submit') {  
+        console.log(newIngredient.elements[i].value);
+       }
+    }
+}
+// const getFormvalue = () => {
+// var x = document.querySelector(">sixth");
+// for (var i = 0; i < x.length; i++)
+// {
+//     if (x.elements[i].value!='Submit')
+//     {  
+//     console.log(x.elements[i].value);
+//     }  
+//     }
+// }
+
+
 // ********** // *********** //
 // Manupilating the submit button
 const handleSubmitButton = (event) => {
@@ -43,26 +63,6 @@ const handleSubmitButton = (event) => {
     Form.reset();
 }
 submitButton.addEventListener('click', handleSubmitButton);
-
-const getFormvalue = () => {
-  const newIngredient = document.querySelector(".new-input-ingredient");
-  for (var i = 0; i < newIngredient.length; i++) {
-   if (newIngredient.elements[i].value!='Submit') {  
-      console.log(newIngredient.elements[i].value);
-     }
-   }
-}
-
-// const getFormvalue = () => {
-//   var x = document.querySelector(">sixth");
-//   for (var i = 0; i < x.length; i++)
-//   {
-//    if (x.elements[i].value!='Submit')
-//     {  
-//       console.log(x.elements[i].value);
-//      }  
-//    }
-// }
 
 var recipename =  recipeName.value;
 
