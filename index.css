@@ -6,12 +6,15 @@ form {
 }
 
 .big-container {
-    padding: 2rem;
-    border: 2px solid black;
+    padding: 4rem;
     border-radius: 5px;
-    background-color: rgb(176, 162, 189);
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
+    background-color: rgb(166, 162, 189);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-bottom: 2rem;
 }
 
 label {
@@ -24,15 +27,16 @@ label {
 
 input {
     padding: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 select {
     padding: 5px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
 }
+
 
 #submit-button {
     padding: 10px;
@@ -47,14 +51,24 @@ select {
 #submit-button:hover {
     font-weight: 700;
     text-transform: uppercase;
-    border: 2px solid brown;
+    border: 1px solid brown;
     background-color: rgb(255, 251, 0);
     color: darkgreen;
     border-radius: 8px;
 }
 
-#add-button {
+.add-ingredient {
+    padding: 6px;
+    margin-top: 10px;
     background-color: rgb(190, 219, 133);
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#add-button {
+    padding: 6px;
+    margin-top: 10px;
+    background-color: rgb(190, 219, 133);
+    border: 1px solid black;
     border-radius: 5px;
 }
