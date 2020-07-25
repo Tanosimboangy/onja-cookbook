@@ -7,10 +7,24 @@ const recipeIngredients = document.querySelector('#input-ingredients');
 const recipeSteps = document.querySelector('#steps');
 const addingStepsButton = document.querySelector('.add');
 const newIngredient = document.querySelector('#new-ingredient');
+const newInput = document.querySelector('.new-input');
+const newStep = document.querySelector('.new-step');
 const submitButton = document.querySelector('#submit-button');
 
 const handleClick = event => {
     console.log(event);
+    const myHTML = `
+    <input type="text" id="new-input-ingredients" placeholder="Ingredients for the recipe" required ><br>
+    `;
+    newInput.innerHTML += myHTML;
 } 
-
 newIngredient.addEventListener('click', handleClick);
+
+const handleButtonClick = event => {
+    console.log(event);
+    const mySecHTML = `
+    <input type="text" id="new-input-step" placeholder="Put the steps to prepare this recipe" required ><br>
+    `;
+    newStep.innerHTML += mySecHTML;
+} 
+addingStepsButton.addEventListener('click', handleButtonClick);
